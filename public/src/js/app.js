@@ -4,3 +4,11 @@ if ("serviceWorker" in navigator) {
     .register("/sw.js")
     .then(() => console.log("Service worker is register"));
 }
+
+let defaultPrompt;
+// 監聽安裝主畫面提醒事件
+window.addEventListener("beforeinstallprompt", event => {
+  event.preventDefault();
+  defaultPrompt = event;
+  return false;
+});

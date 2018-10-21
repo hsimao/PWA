@@ -9,7 +9,7 @@ self.addEventListener("activate", event => {
 
 // 監聽所有的請求事件
 self.addEventListener("fetch", event => {
-  console.log("[Servic Worker] 捕獲事件 ...", event);
+  // console.log("[Servic Worker] 捕獲事件 ...", event);
   // 回應請求事件
   event.respondWith(fetch(event.request));
 });
